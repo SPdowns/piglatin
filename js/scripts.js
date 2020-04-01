@@ -8,23 +8,24 @@ var consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q
 var finish = function(sentence) { 
   var inputArray = sentence.split(" ");
   var outArray = inputArray.map(function(word) {
-  var firstLetter = word.charAt(0);
-  var secondLetter = word.charAt(1);
-  var result = [];
+    var firstLetter = word.charAt(0);
+    var secondLetter = word.charAt(1);
+    var result = [];
 
 
-  if (vowels.includes(firstLetter)) {
-  // loop through vowels array and see if your char matches
-  // loop through consonant array and see if your char matches
-    return (word + "way");
-  } else if (consonants.includes(firstLetter) && consonants.includes(secondLetter)) {
-    result.push(word.slice(2, word.length) + word[0] + word [1] + 'ay');
-    return result.join('');
-  } else if (consonants.includes(firstLetter)) {
-    result.push(word.slice(1, word.length) + word [0] + 'ay');
-    return result.join('');
-  }
-});
+    if (vowels.includes(firstLetter)) {
+    // loop through vowels array and see if your char matches
+    // loop through consonant array and see if your char matches
+      return (word + "way");
+    } else if (consonants.includes(firstLetter) && consonants.includes(secondLetter)) {
+      result.push(word.slice(2, word.length) + word[0] + word [1] + 'ay');
+      return result.join('');
+    } else if (consonants.includes(firstLetter)) {
+      result.push(word.slice(1, word.length) + word [0] + 'ay');
+      return result.join('');
+    }
+  });
+  return outArray.join(' ');
 };
 
 // for(var i = 0; i < vowels.length; i++){
