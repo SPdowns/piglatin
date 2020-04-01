@@ -1,5 +1,6 @@
 
-vowels = ['a', 'e', 'i', 'o', ']
+vowels = ['a', 'e', 'i', 'o', 'u']
+co
 
 $(document).ready(function(){
   $("form#pig-latin").submit(function(event){
