@@ -11,9 +11,13 @@ var finish = function(word) {
   // loop through vowels array and see if your char matches
   // loop through consonant array and see if your char matches
     return (word + "way");
-  } else if (consonants.includes(firstLetter) || consonants.includes(secondLetter)) {
-        result.push(word.slice(1, word.length) + word [0] + 'ay');
+  }   else if (consonants.includes(firstLetter)&& consonants.includes(secondLetter)) {
+      result.push(word.slice(2, word.length) + word[0] + word [1] + 'ay');
+      return result.join('');
+  } else if (consonants.includes(firstLetter)) {
+    result.push(word.slice(1, word.length) + word [0] + 'ay');
     return result.join('');
+  
   }
 };
 
